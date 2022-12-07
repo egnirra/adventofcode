@@ -11,13 +11,13 @@ with open("2022/day3/input.txt") as f:
         text_len_div = int((len(d)) / 2)
 
         first, second = d[0:text_len_div], d[text_len_div::]
-        equal = set(c for c in first if c in second)
+        equal = set(first) & set(second)
         for e in equal:
             char_num = ord(e)
             if char_num > lower:
-                char_num = char_num - lower
+                char_num -= lower
             else:
-                char_num = char_num - upper
+                char_num -= upper
 
-            sum_prio = sum_prio + char_num
+            sum_prio += char_num
 print(sum_prio)

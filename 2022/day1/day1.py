@@ -1,7 +1,7 @@
 
 
 
-with open("input.txt") as f:
+with open("2022/day1/input.txt") as f:
     data = f.readlines()
     data_len = len(data)
     calories = []
