@@ -25,16 +25,6 @@ class Game:
     def add_cube(self, cube: Cube):
         self.cubes.append(cube)
 
-    def count_cubes(self):
-        output = []
-        sorted_cubes = sorted(self.cubes)
-        groups = groupby(sorted_cubes)
-        for k, g in groups:
-            output.append((len(list(g)), k))
-        #print(group)
-        return output
-
-
 def read_input() -> list[str]:
     output = []
     with open("day2/input.txt") as f:
